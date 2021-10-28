@@ -1,0 +1,11 @@
+---creating procedures
+https://www.sqlshack.com/sql-server-stored-procedures-for-beginners/
+
+
+
+
+
+---Viewing stored proceedures details in different ways
+SELECT OBJECT_DEFINITION (OBJECT_ID(N'Your_SP'))
+
+sp_helptext SelectAllOrders

@@ -1,0 +1,13 @@
+SELECT        COUNT(OrderID) AS count1, OrderID
+FROM            orders
+GROUP BY OrderID
+HAVING        (COUNT(OrderID) > 2)
+
+
+-------------duplicates rows on ORDERID
+
+SELECT        COUNT(OrderID) AS count1, OrderID, OrderDate, ShipDate, ShipMode, CustomerID, CustomerName, Segment, Country, City, State, PostalCode, Region, ProductID, Category, SubCategory, ProductName, Sales, Quantity, Discount, 
+                         Profit
+FROM            orders
+GROUP BY OrderID, OrderDate, ShipDate, ShipMode, CustomerID, CustomerName, Segment, Country, City, State, PostalCode, Region, ProductID, Category, SubCategory, ProductName, Sales, Quantity, Discount, Profit
+HAVING        (COUNT(OrderID) > 2)
